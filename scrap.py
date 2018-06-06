@@ -15,7 +15,7 @@ data = pd.read_html(data_url)
 
 # Create DataFrame
 df = data[0]
-df.columns = ["省/市", '2017', '2016', '2015', '2014', '2013', '2012', '2011']
+df.columns = ["Province", '2017', '2016', '2015', '2014', '2013', '2012', '2011']
 df = df.drop([0, 1])
 
 
@@ -28,4 +28,4 @@ for column in df.columns:
 df = df.reset_index(drop=True)
 
 # Save data as csv file
-df.to_csv("gaokao_population.csv")
+df.to_csv("Data/gaokao_population.csv")
